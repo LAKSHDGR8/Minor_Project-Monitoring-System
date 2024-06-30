@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="refresh" content="10">  <!-- This will refresh the page every 10 seconds -->
+    <title>VM Metrics</title>
+</head>
+<body>
+    <h1>VM Metrics</h1>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Timestamp</th>
+            <th>CPU Percent</th>
+            <th>Memory Percent</th>
+            <th>Is Alive</th>
+        </tr>
+        {% for metric in metrics %}
+        <tr>
+            <td>{{ metric.id }}</td>
+            <td>{{ metric.timestamp }}</td>
+            <td>{{ metric.cpu_percent }}</td>
+            <td>{{ metric.memory_percent }}</td>
+            <td>{{ metric.is_alive }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
+
